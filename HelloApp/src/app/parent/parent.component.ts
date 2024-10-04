@@ -9,8 +9,16 @@ import { ChildComponent } from '../child/child.component';
   styleUrl: './parent.component.scss',
 })
 export class ParentComponent {
-  value: null | number = null;
-  randomizeValue() {
-    this.value = Math.round(Math.random() * 100 - 1);
+  value: number = 10;
+
+  changeValue = (newValue: number) => {
+    this.value = newValue;
+  };
+
+  handleNewValue(newValue: number) {
+    this.value = newValue;
+  }
+  handleCustomEvent(value: { title: string; description: string }) {
+    console.log(`Value `, value);
   }
 }

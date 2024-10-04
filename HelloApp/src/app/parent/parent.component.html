@@ -1,2 +1,6 @@
-<button (click)="randomizeValue()">Randomize</button>
-<app-child [random]="value" />
+{{ value }}
+<app-child
+  [callback]="changeValue"
+  (onNewValue)="handleNewValue($event)"
+  (onCustomEvent)="handleCustomEvent($event)"
+/>

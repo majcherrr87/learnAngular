@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NameDisplayerComponent } from './name-displayer.component';
+import { WelcomeComponent } from './welcome.component';
 
-describe('NameDisplayerComponent', () => {
-  let component: NameDisplayerComponent;
-  let fixture: ComponentFixture<NameDisplayerComponent>;
+describe('WelcomeComponent', () => {
+  let component: WelcomeComponent;
+  let fixture: ComponentFixture<WelcomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NameDisplayerComponent]
+      imports: [WelcomeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NameDisplayerComponent);
+    fixture = TestBed.createComponent(WelcomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
