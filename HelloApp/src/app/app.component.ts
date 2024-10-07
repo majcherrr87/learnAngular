@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import { UsersComponent } from './users/users.component';
-import { GrandparentComponent } from './grandparent/grandparent.component';
+import { RandomNumbersComponent } from './random-numbers/random-numbers.component';
+import { CarsComponent } from './cars/cars.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UsersComponent, GrandparentComponent],
+  imports: [RouterOutlet, CarsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
