@@ -1,14 +1,11 @@
-<button (click)="addBox()">Add new box</button>
-<div class="box-container">
-  @for(box of boxes; track $index){
-  <div class="box" [style]="getStyle(box)"></div>
+<div class="container">
+  <ul>
+    @for(item of coords; track $index){
+    <li>X: {{ item.x }}px Y: {{ item.y }}px</li>
+    }
+  </ul>
+  @if(coords.length < 10){
+
+  <app-creazy-box (onNewPosition)="handleNewPosition($event)" />
   }
 </div>
-
-@defer(on timer(5s)){
-<app-lazy />
-} @placeholder {
-<p>I am a placeholder</p>
-} @loading(minimum 1s) {
-<p>I am a loading massage</p>
-}

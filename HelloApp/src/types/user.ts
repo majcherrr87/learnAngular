@@ -8,3 +8,7 @@ export type UserNameChangeEvent = {
   id: string;
   newName: string;
 };
+export type Coords = {
+  x: number;
+  y: number;
+};
