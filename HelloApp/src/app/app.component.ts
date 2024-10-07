@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CreazyBoxComponent } from './creazy-box/creazy-box.component';
-import { Coords } from '../types/user';
+import { ContainerComponent } from './container/container.component';
+import { TitleComponent } from './title/title.component';
+import { ConditionalContentComponent } from './conditional-content/conditional-content.component';
+import { SamrtComponetComponent } from './samrt-componet/samrt-componet.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CreazyBoxComponent],
+  imports: [
+    RouterOutlet,
+    ContainerComponent,
+    TitleComponent,
+    ConditionalContentComponent,
+    SamrtComponetComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  coords: Coords[] = [];
-  visible = this.coords.length <= 10;
+  visible = false;
 
-  handleNewPosition(coords: Coords) {
-    this.coords.push(coords);
+  handleVisible() {
+    this.visible = !this.visible;
   }
 }

@@ -1,11 +1,27 @@
-<div class="container">
-  <ul>
-    @for(item of coords; track $index){
-    <li>X: {{ item.x }}px Y: {{ item.y }}px</li>
-    }
-  </ul>
-  @if(coords.length < 10){
+<!-- <app-container>
+  <app-title
+    title="Lorem ipsum dolor sit ammet "
+    ngProjectAs="[sidebar='yes']"
+  />
+  <h1>Lorem ipsum</h1>
+  <p class="footer">I a Paragraf Footer</p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugit non nam
+    quibusdam voluptatibus, animi molestias modi praesentium dolorum laboriosam,
+    quae distinctio nostrum earum perspiciatis facilis cumque unde libero harum.
+  </p>
+  <span sidebar>I a sidebar content</span>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugit non nam
+    quibusdam voluptatibus, animi molestias modi praesentium dolorum laboriosam,
+    quae distinctio nostrum earum perspiciatis facilis cumque unde libero harum.
+  </p>
+  <footer class="footer">I am a footer content</footer>
+</app-container> -->
+<app-conditional-content>
+  @if(visible){
 
-  <app-creazy-box (onNewPosition)="handleNewPosition($event)" />
+  <app-samrt-componet />
   }
-</div>
+  <button (click)="handleVisible()">click</button>
+</app-conditional-content>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { SamrtComponetComponent } from './samrt-componet.component';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('SamrtComponetComponent', () => {
+  let component: SamrtComponetComponent;
+  let fixture: ComponentFixture<SamrtComponetComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChildComponent]
+      imports: [SamrtComponetComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(SamrtComponetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
