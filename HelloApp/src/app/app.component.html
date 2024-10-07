@@ -1,9 +1,7 @@
-<app-page-layout>
-  <h1 header>Welcome to my page</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium
-    dicta illo, quas cupiditate veniam omnis distinctio nihil repudiandae ipsum
-    officiis quasi est, saepe perspiciatis id eligendi quod obcaecati dolorum?
-  </p>
-  <p footer>This is a Footer</p>
-</app-page-layout>
+@if( visible ){
+
+<app-foo [value]="value" [users]="users" />
+}
+<button (click)="changeValue()">change Value</button>
+<button (click)="addUsers()">add new user</button>
+<button (click)="toggleVisible()">Changle Visible</button>
