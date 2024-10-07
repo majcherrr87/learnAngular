@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SamrtComponetComponent } from './samrt-componet.component';
+import { PageContainerComponent } from './page-container.component';
 
-describe('SamrtComponetComponent', () => {
-  let component: SamrtComponetComponent;
-  let fixture: ComponentFixture<SamrtComponetComponent>;
+describe('PageContainerComponent', () => {
+  let component: PageContainerComponent;
+  let fixture: ComponentFixture<PageContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SamrtComponetComponent]
+      imports: [PageContainerComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SamrtComponetComponent);
+    fixture = TestBed.createComponent(PageContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

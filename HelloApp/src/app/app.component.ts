@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
-import { TitleComponent } from './title/title.component';
-import { ConditionalContentComponent } from './conditional-content/conditional-content.component';
-import { SamrtComponetComponent } from './samrt-componet/samrt-componet.component';
+import { PageContainerComponent } from './page-container/page-container.component';
+import { PageBodyComponent } from './page-body/page-body.component';
+import { PageTitleComponent } from './page-title/page-title.component';
 
 @Component({
   selector: 'app-root',
@@ -11,17 +11,11 @@ import { SamrtComponetComponent } from './samrt-componet/samrt-componet.componen
   imports: [
     RouterOutlet,
     ContainerComponent,
-    TitleComponent,
-    ConditionalContentComponent,
-    SamrtComponetComponent,
+    PageContainerComponent,
+    PageBodyComponent,
+    PageTitleComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  visible = false;
-
-  handleVisible() {
-    this.visible = !this.visible;
-  }
-}
+export class AppComponent {}
