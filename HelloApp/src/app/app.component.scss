@@ -1,0 +1,9 @@
+.box-container {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+.box {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}

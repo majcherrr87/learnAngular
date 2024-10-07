@@ -1,2 +1,14 @@
-<h1>hej</h1>
-<app-cars />
+<button (click)="addBox()">Add new box</button>
+<div class="box-container">
+  @for(box of boxes; track $index){
+  <div class="box" [style]="getStyle(box)"></div>
+  }
+</div>
+
+@defer(on timer(5s)){
+<app-lazy />
+} @placeholder {
+<p>I am a placeholder</p>
+} @loading(minimum 1s) {
+<p>I am a loading massage</p>
+}
