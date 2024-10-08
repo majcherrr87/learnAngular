@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-child',
+  selector: 'app-users-list',
   standalone: true,
   imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './child.component.html',
-  styleUrl: './child.component.scss',
+  templateUrl: './users-list.component.html',
+  styleUrl: './users-list.component.scss',
 })
-export class ChildComponent {
+export class UsersListComponent {
   @Input()
-  numbers: number[] = [];
+  users: string[] = [];
 }

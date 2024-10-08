@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CanvasComponent } from './canvas/canvas.component';
+import { UsersComponent } from './users/users.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CanvasComponent],
+  imports: [RouterOutlet, UsersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
