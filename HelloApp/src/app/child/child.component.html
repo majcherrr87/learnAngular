@@ -1,0 +1,9 @@
+<button (click)="randomNumbre()">Random Numbre</button>
+<button (click)="addNumbre()">Add to values</button>
+
+<h1>{{ value }}</h1>
+<ul>
+  @for(val of values; track $index){
+  <li>{{ val }}</li>
+  }
+</ul>
