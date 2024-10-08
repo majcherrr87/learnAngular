@@ -1,26 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HelloComponent } from './hello/hello.component';
-import { FooComponent } from './foo/foo.component';
+import { GrandParentComponent } from './grand-parent/grand-parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HelloComponent, FooComponent],
+  imports: [RouterOutlet, GrandParentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  value: string = 'Change-detection';
-  values: number[] = [];
+  @Input()
+  numbers: number[] = [];
 
-  changeValue() {
-    this.value = 'Lorem Ipsum';
-  }
-
-  addNewValues() {
-    const newvalue = Math.round(Math.random() * 100);
-    this.values = [...this.values, newvalue];
-    // this.values.push(newvalue);
+  addNewNumber() {
+    const newNumber = Math.round(Math.random() * 100);
+    this.numbers = [...this.numbers, newNumber];
   }
 }
