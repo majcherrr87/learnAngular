@@ -1,1 +1,16 @@
-<p>numbers works!</p>
+<button (click)="addNewNumber()">Add new number</button>
+<strong>All numbers </strong>
+
+<ul>
+  @for(value of numbers(); track $index){
+  <li>{{ value }}</li>
+  }
+</ul>
+
+<strong>All even numbers </strong>
+
+<ul>
+  @for(valueEven of eventNumbers(); track $index){
+  <li>{{ valueEven }}</li>
+  }
+</ul>
