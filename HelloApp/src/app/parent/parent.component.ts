@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 
 @Component({
@@ -9,11 +9,13 @@ import { ChildComponent } from '../child/child.component';
   styleUrl: './parent.component.scss',
 })
 export class ParentComponent {
-  visibility: boolean = true;
-  value!: number;
-  values: number[] = [];
+  value: number = 1000;
 
-  toggleVisibility() {
-    this.visibility = !this.visibility;
+  increase() {
+    this.value++;
+  }
+
+  handleChange(value: number) {
+    this.value = value;
   }
 }

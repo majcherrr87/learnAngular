@@ -1,5 +1,5 @@
-@if(visibility) {
-<app-child [value]="value" [values]="values" />
+<p>Parent {{ value }}</p>
+<!-- <app-child [(value)]="value" /> -->
+<app-child [value]="value" (valueChange)="handleChange($event)" />
 
-}
-<button (click)="toggleVisibility()">toggle visibility</button>
+<button (click)="increase()">+1 from Parent</button>

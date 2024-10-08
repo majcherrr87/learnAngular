@@ -1,4 +1,11 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -11,17 +18,13 @@ export class ChildComponent implements OnChanges {
   @Input()
   value!: number;
 
-  @Input()
-  values!: number[];
+  @Output()
+  valueChange = new EventEmitter<number>();
 
+  increase() {
+    this.valueChange.emit(this.value + 1);
+  }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.value, this.values);
-  }
-
-  randomNumbre() {
-    this.value = Math.round(Math.random() * 100);
-  }
-  addNumbre() {
-    this.values = [...this.values, this.value];
+    console.log('Parent Changes ', changes);
   }
 }

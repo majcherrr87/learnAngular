@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CounterComponent } from './counter/counter.component';
-import { LifecycleTesterComponent } from './lifecycle-tester/lifecycle-tester.component';
 import { ParentComponent } from './parent/parent.component';
+import { TemplateComponent } from './template/template.component';
+import { FooComponent } from './foo/foo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ParentComponent],
+  imports: [RouterOutlet, TemplateComponent, FooComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
