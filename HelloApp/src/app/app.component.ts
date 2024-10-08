@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ParentComponent } from './parent/parent.component';
-import { TemplateComponent } from './template/template.component';
-import { FooComponent } from './foo/foo.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TemplateComponent, FooComponent],
+  imports: [RouterOutlet, DataTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
